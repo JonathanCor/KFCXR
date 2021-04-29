@@ -1,5 +1,7 @@
 __author__ = 'Jonathan Corvers'
 
+from .malpractice_categories import MALPRACTICE_CATEGORIES
+
 
 TITLE = 'Fifty Shades of KFC'
 

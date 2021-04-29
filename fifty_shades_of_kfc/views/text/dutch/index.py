@@ -1,5 +1,7 @@
 __author__ = 'Jonathan Corvers'
 
+from .malpractice_categories import MALPRACTICE_CATEGORIES
+
 
 TITLE = 'Vijftig Tinten KFC'
 
@@ -15,3 +17,5 @@ CARD_TITLE_3 = 'Gezondheid'
 CARD_TITLE_4 = 'Dierenwelzijn'
 
 CARD_TITLE_5 = 'Lokale Gemeenschap'
+
+

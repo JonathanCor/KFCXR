@@ -41,46 +41,16 @@
                     </span>
                 </div>
             </div>
+            {% for category in malpractice_categories %}
             <div class="card-col col s12 m6 l4">
                 <div class="card category-card hoverable">
-                    <div class="card-image" id="animalWelfare">
-                        <img src="https://lh3.googleusercontent.com/proxy/iJfLJqXnpBMPYbvnxuXxtifZew4m-B5NGkfzUkLf4kZOEe0Wrk5SbJ0H39Fkfn8gLlDRFrtjXlvJH6faXKSYLCK_kx-XcsJLJk5N9XZbme9VxBzSb-S1earj7MzQ78X10FrbxDQXveBxDA7-X3AakOEsxEfxV19y-l0U_GwxmIusbadErrUpwvNyr2bt1NTvn3OUEHwOiw" class="category-image">
-                        <span class="card-title">{{ card_title_4 }}</span>
+                    <div class="card-image" id="{{ category.reference }}">
+                        <img src="{{ category.image_ref }}" class="category-image">
+                        <span class="card-title">{{ category.name }}</span>
                     </div>
                 </div>
             </div>
-            <div class="card-col col s12 m6 l4">
-                <div class="card category-card hoverable">
-                    <div class="card-image" id="workingConditions">
-                        <img src="https://rebellion.global/assets/img/wood-blocks/bee2.svg" class="category-image">
-                        <span class="card-title">{{ card_title_1 }}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-col col s12 m6 l4">
-                <div class="card category-card hoverable">
-                    <div class="card-image" id="climateEnvironment">
-                        <img src="https://rebellion.global/assets/img/wood-blocks/hourglass.svg" class="category-image">
-                        <span class="card-title">{{ card_title_2 }}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-col col s12 m6 l4">
-                <div class="card category-card hoverable">
-                    <div class="card-image" id="health">
-                        <img src="https://rebellion.global/assets/img/wood-blocks/orchid.svg" class="category-image">
-                        <span class="card-title">{{ card_title_3 }}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-col col s12 m6 l4">
-                <div class="card category-card hoverable">
-                    <div class="card-image" id="localCommunity">
-                        <img src="https://rebellion.global/assets/img/wood-blocks/tree.svg" class="category-image">
-                        <span class="card-title">{{ card_title_5 }}</span>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     </div>
