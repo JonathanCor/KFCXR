@@ -11,40 +11,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <style>
-        {#body, p, span, div {#}
-        {#    font-family: 'Crimson Text', serif;#}
-        {#}#}
+        body, p, span, div {
+            font-family: 'Crimson Text', serif;
+        }
         @font-face { font-family: FUCXEDCAPS; src: url({% static 'fonts/FUCXEDCAPS.otf' %}); }
-        h1, h2, h3 {
+        h1, h2, h3, .card-title {
             font-family: FUCXEDCAPS;
         }
     </style>
 </head>
 <body>
+    <div id="backgroundImage">
     <div class="container">
         <div class="row" id="headerRow">
-            <div class="col s12">
-                <h1>Fifty Shades of KFC</h1>
+            <div class="col s12 m3 l2 right-align push-m9 push-l10">
+                <h2>
+                    <a class="language-link" href="{% url 'fifty_shades_of_kfc:setLanguage' 'EN' %}">EN</a>|<a class="language-link" href="{% url 'fifty_shades_of_kfc:setLanguage' 'NL' %}">NL</a>
+                </h2>
+            </div>
+            <div class="col s12 m9 l10 pull-m3 pull-l2">
+                <h1>{{ title }}</h1>
             </div>
         </div>
-        <div id="listRow" class="row">
-            <div class="col s12">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                </ul>
+        <div id="cardRow" class="row">
+            <div class="card-col col s12 m6 l4">
+                <div class="card-panel grey category-card">
+                    <span class="white-text flow-text">
+                        {{ grey_card }}
+                    </span>
+                </div>
+            </div>
+            <div class="card-col col s12 m6 l4">
+                <div class="card category-card hoverable">
+                    <div class="card-image" id="animalWelfare">
+                        <img src="https://lh3.googleusercontent.com/proxy/iJfLJqXnpBMPYbvnxuXxtifZew4m-B5NGkfzUkLf4kZOEe0Wrk5SbJ0H39Fkfn8gLlDRFrtjXlvJH6faXKSYLCK_kx-XcsJLJk5N9XZbme9VxBzSb-S1earj7MzQ78X10FrbxDQXveBxDA7-X3AakOEsxEfxV19y-l0U_GwxmIusbadErrUpwvNyr2bt1NTvn3OUEHwOiw" class="category-image">
+                        <span class="card-title">{{ card_title_4 }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-col col s12 m6 l4">
+                <div class="card category-card hoverable">
+                    <div class="card-image" id="workingConditions">
+                        <img src="https://rebellion.global/assets/img/wood-blocks/bee2.svg" class="category-image">
+                        <span class="card-title">{{ card_title_1 }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-col col s12 m6 l4">
+                <div class="card category-card hoverable">
+                    <div class="card-image" id="climateEnvironment">
+                        <img src="https://rebellion.global/assets/img/wood-blocks/hourglass.svg" class="category-image">
+                        <span class="card-title">{{ card_title_2 }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-col col s12 m6 l4">
+                <div class="card category-card hoverable">
+                    <div class="card-image" id="health">
+                        <img src="https://rebellion.global/assets/img/wood-blocks/orchid.svg" class="category-image">
+                        <span class="card-title">{{ card_title_3 }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-col col s12 m6 l4">
+                <div class="card category-card hoverable">
+                    <div class="card-image" id="localCommunity">
+                        <img src="https://rebellion.global/assets/img/wood-blocks/tree.svg" class="category-image">
+                        <span class="card-title">{{ card_title_5 }}</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
