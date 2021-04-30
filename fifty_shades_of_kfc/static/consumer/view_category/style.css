@@ -110,6 +110,6 @@ body {
     background-color: var(--purple);
 }
 
-.language-link {
+.language-link, .title-link {
     color: black;
 }
