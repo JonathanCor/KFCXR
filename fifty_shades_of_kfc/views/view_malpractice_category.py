@@ -13,8 +13,10 @@ def view_malpractice_category(request, category_reference):
 
     if language == 'NL':
         from .text.dutch.malpractice_categories import MALPRACTICE_CATEGORIES
+        from .text.dutch.index import TITLE
     else:
         from .text.english.malpractice_categories import MALPRACTICE_CATEGORIES
+        from .text.english.index import TITLE
 
     other_categories = set()
     current_category = None
@@ -26,7 +28,8 @@ def view_malpractice_category(request, category_reference):
 
     context = {
         'current_category': current_category,
-        'other_categories': other_categories
+        'other_categories': other_categories,
+        'title': TITLE,
     }
 
     return render(request=request, context=context, template_name='consumer/malpractice_category.html')

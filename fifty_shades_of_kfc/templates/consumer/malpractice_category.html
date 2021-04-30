@@ -1,10 +1,81 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fifty Shades of KFC</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'materialize/css/materialize.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'consumer/view_category/style.css' %}">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+        body, p, span, div {
+            font-family: 'Crimson Text', serif;
+        }
+        @font-face { font-family: FUCXEDCAPS; src: url({% static 'fonts/FUCXEDCAPS.otf' %}); }
+        h1, h2, h3, .card-title, .collapsible-header {
+            font-family: FUCXEDCAPS;
+        }
+    </style>
 </head>
-<body>
+<body class="{{ current_category.reference }}" style="background-image: url('{{ current_category.image_ref }}'); background-attachment: fixed;">
+<div id="backgroundImage">
+<div class="container">
+    <div class="row" id="headerRow">
+        <div class="col s12 m3 l2 right-align push-m9 push-l10">
+            <h3>
+                <a class="language-link" href="{% url 'fifty_shades_of_kfc:setLanguageCategory' current_category.reference 'EN' %}">EN</a>|<a class="language-link" href="{% url 'fifty_shades_of_kfc:setLanguageCategory' current_category.reference 'NL' %}">NL</a>
+            </h3>
+        </div>
+        <div class="col s12 m9 l10 pull-m3 pull-l2">
+            <h2>{{ title }}</h2>
+        </div>
+    </div>
+    <div id="categoryTitleRow" class="row">
+        <div class="col s12 flow-text">
+            <h1>{{ current_category.name }}</h1>
+        </div>
+    </div>
+    <div id="collapsibleRow">
+        {% for malpractice in current_category.malpractices %}
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header valign-wrapper flow-text"><i class="material-icons">warning</i>{{ malpractice.title }}</div>
+                    <div class="collapsible-body row">
+                        <img class="malpracticeImage col s12 m12 l6 push-l6" src="{{ malpractice.image_ref }}">
+                        <div class="col s12 m12 l6 pull-l6">
+                            <span class="flow-text">{{ malpractice.explanation }}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+    <div id="cardRow" class="row">
+        {% for category in other_categories %}
+            <div class="card-col col s12 m6 l3">
+                <a href="{% url 'fifty_shades_of_kfc:viewCategory' category.reference %}">
+                    <div class="card category-card hoverable">
+                        <div class="card-image" id="{{ category.reference }}">
+                            <img src="{{ category.image_ref }}" class="category-image">
+                            <span class="card-title">{{ category.name }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
 
+<script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+    });
+</script>
 </body>
 </html>

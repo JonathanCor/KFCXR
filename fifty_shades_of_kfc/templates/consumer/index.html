@@ -43,12 +43,14 @@
             </div>
             {% for category in malpractice_categories %}
             <div class="card-col col s12 m6 l4">
+                <a href="{% url 'fifty_shades_of_kfc:viewCategory' category.reference %}">
                 <div class="card category-card hoverable">
                     <div class="card-image" id="{{ category.reference }}">
                         <img src="{{ category.image_ref }}" class="category-image">
                         <span class="card-title">{{ category.name }}</span>
                     </div>
                 </div>
+                </a>
             </div>
             {% endfor %}
         </div>
@@ -56,11 +58,5 @@
     </div>
 
     <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js' %}"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems);
-        });
-    </script>
 </body>
 </html>

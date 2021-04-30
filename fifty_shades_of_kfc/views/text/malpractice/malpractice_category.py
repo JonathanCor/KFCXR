@@ -5,12 +5,12 @@ class MalpracticeCategory:
 
     def __init__(self, name, reference, image_ref=None):
         self.name = name
-        self.malpractices = set()
+        self.malpractices = list()
         self._image_ref = image_ref
         self.reference = reference
 
     def add_malpractice(self, malpractice):
-        self.malpractices.add(malpractice)
+        self.malpractices.append(malpractice)
 
     @property
     def image_ref(self):
