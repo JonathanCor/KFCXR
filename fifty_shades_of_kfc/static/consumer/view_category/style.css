@@ -113,3 +113,7 @@ body {
 .language-link, .title-link {
     color: black;
 }
+
+#currentCategory {
+    word-wrap: break-word;
+}
