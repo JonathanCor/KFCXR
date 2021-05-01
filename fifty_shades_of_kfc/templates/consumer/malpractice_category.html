@@ -20,7 +20,12 @@
         }
     </style>
 </head>
-<body class="{{ current_category.reference }}" style="background-image: url('{{ current_category.image_ref }}'); background-attachment: fixed;">
+<body class="{{ current_category.reference }}">
+<div id="categoryImageWrapper">
+    <div id="categoryImage" style="background-image: url('{{ current_category.image_ref }}');">
+
+    </div>
+</div>
 <div id="backgroundImage">
 <div class="container">
     <div class="row" id="headerRow">
