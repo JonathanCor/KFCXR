@@ -45,9 +45,9 @@
     </div>
     <div id="collapsibleRow">
         {% for malpractice in current_category.malpractices %}
-            <ul class="collapsible">
+            <ul class="collapsible {{ current_category.reference }}">
                 <li>
-                    <div class="collapsible-header valign-wrapper flow-text"><i class="material-icons">warning</i>{{ malpractice.title }}</div>
+                    <div class="collapsible-header valign-wrapper flow-text {{ current_category.reference }}"><i class="material-icons">warning</i>{{ malpractice.title }}</div>
                     <div class="collapsible-body row">
                         <img class="malpracticeImage col s12 m12 l6 push-l6" src="{{ malpractice.image_ref }}">
                         <div class="col s12 m12 l6 pull-l6">

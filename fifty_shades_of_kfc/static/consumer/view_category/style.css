@@ -10,6 +10,9 @@
     --red: rgb(220, 79, 0);
     --dark-blue: rgb(56, 96, 170);
     --angry: rgb(200, 0, 130);
+
+    --light: 80;
+    --treshold: 60;
 }
 
 html, body {
@@ -47,7 +50,7 @@ html, body {
     width: 100vw;
     content: "";
     background-repeat: no-repeat no-repeat;
-    background-size: 50vw;
+    background-size: 30vh;
     background-position: right center;
     background-attachment: fixed;
     /*position: absolute;*/
@@ -68,7 +71,7 @@ body {
 }
 
 .collapsible, .collapsible-header {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-blue) !important;
 }
 
 .collapsible {
@@ -106,6 +109,7 @@ body {
 .category-card {
     height: 300px;
     overflow: hidden;
+    word-wrap: break-word;
 }
 
 .card-image {
@@ -130,23 +134,23 @@ body {
     color: black !important;
 }
 
-#workingConditions {
+#workingConditions, .collapsible.workingConditions, .collapsible-header.workingConditions {
     background-color: var(--lemon);
 }
 
-#climateEnvironment {
+#climateEnvironment, .collapsible.climateEnvironment, .collapsible-header.climateEnvironment {
     background-color: var(--pink);
 }
 
-#health {
+#health, .collapsible.health, .collapsible-header.health {
     background-color: var(--light-green);
 }
 
-#animalWelfare {
+#animalWelfare, .collapsible.animalWelfare, .collapsible-header.animalWelfare {
     background-color: var(--bright-pink);
 }
 
-#localCommunity {
+#localCommunity, .collapsible.localCommunity, .collapsible-header.localCommunity {
     background-color: var(--purple);
 }
 
