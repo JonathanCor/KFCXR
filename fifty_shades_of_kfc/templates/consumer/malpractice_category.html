@@ -87,8 +87,6 @@
         document.getElementById("categoryImageWrapper").style.height = height.toString().concat("px");
 
         const resizeObserver = new ResizeObserver(entries => {
-            console.log('Body height changed:', entries[0].target.clientHeight);
-
             var height = Math.max(background.offsetHeight, background.scrollHeight );
             document.getElementById("categoryImageWrapper").style.height = height.toString().concat("px");
         });
