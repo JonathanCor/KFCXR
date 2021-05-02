@@ -80,6 +80,25 @@
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.collapsible');
         var instances = M.Collapsible.init(elems);
+
+        var body = document.body,
+            html = document.documentElement;
+        var background = document.getElementById("backgroundImage")
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight, background.offsetHeight, background.scrollHeight );
+
+        document.getElementById("categoryImageWrapper").style.height = height.toString().concat("px");
+
+        const resizeObserver = new ResizeObserver(entries => {
+            console.log('Body height changed:', entries[0].target.clientHeight);
+
+            var height = Math.max( body.scrollHeight, body.offsetHeight,
+                html.clientHeight, html.scrollHeight, html.offsetHeight, background.offsetHeight, background.scrollHeight );
+            document.getElementById("categoryImageWrapper").style.height = height.toString().concat("px");
+        });
+        resizeObserver.observe(background)
+
     });
 </script>
 </body>
