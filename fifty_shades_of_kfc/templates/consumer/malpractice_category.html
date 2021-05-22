@@ -49,10 +49,32 @@
                 <li>
                     <div class="collapsible-header valign-wrapper flow-text {{ current_category.reference }}"><i class="material-icons">warning</i>{{ malpractice.title }}</div>
                     <div class="collapsible-body row">
+                        {% if malpractice.image_ref %}
+                            {% if malpractice.explanation %}
                         <img class="malpracticeImage col s12 m12 l6 push-l6" src="{{ malpractice.image_ref }}">
                         <div class="col s12 m12 l6 pull-l6">
                             <span class="flow-text">{{ malpractice.explanation }}</span>
                         </div>
+                            {% else %}
+                                <img class="malpracticeImage col s12 m12 l12" src="{{ malpractice.image_ref }}">
+                            {% endif %}
+                        {% else %}
+                        <div class="col s12 m12 l12">
+                            <span class="flow-text">{{ malpractice.explanation }}</span>
+                        </div>
+                        {% endif %}
+                        {% if malpractice.url_ref %}
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <h4>{{ sources }}</h4>
+                                </div>
+                            {% for url in malpractice.url_ref %}
+                                <div class="col s12 m12 l12">
+                                    <a class="white-text flow-text" href="{{ url }}">{{ url }}</a>
+                                </div>
+                            {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
                 </li>
             </ul>

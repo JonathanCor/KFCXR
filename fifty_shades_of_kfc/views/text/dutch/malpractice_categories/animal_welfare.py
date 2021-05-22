@@ -5,19 +5,41 @@ from fifty_shades_of_kfc.views.text.malpractice import MalpracticeCategory, Malp
 
 ANIMAL_WELFARE = MalpracticeCategory(name='Dierenwelzijn', reference='animalWelfare')
 
-lorem_ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' \
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ' \
-              'aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ' \
-              'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ' \
-              'qui officia deserunt mollit anim id est laborum'
 
-image_ref = 'https://images1.persgroep.net/rcs/PwH31Whvtd2oskLgaeQcrSHRY8Y/diocontent/176393540/_fitwidth/763?appId=' \
-            '93a17a8fd81db0de025c8abd1cca1279&quality=0.8'
+malpractice = Malpractice(title='21 volgroeide kippen per 1m²',
+                          explanation='In meer dan 80 procent van de gevallen propt KFC 21 volgroeide kippen op één '
+                                      'vierkante meter. Probeer u dat even voor te stellen.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
 
-for counter in range(10):
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
 
-    malpractice = Malpractice(title='Probleem ' + str(counter+1),
-                              explanation=lorem_ipsum,
-                              image_ref=image_ref)
 
-    ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+malpractice = Malpractice(title='KFC kippen zien nooit de zon',
+                          explanation='De helft van de kippen zien in hun korte leven niet één keer het zonlicht.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Pijnlijke infecties',
+                          explanation='1 op 3 KFC-kippen lijdt aan pijnlijke infecties.',
+                          url_ref=['https://joop.bnnvara.nl/nieuws/kfc-geeft-toe-een-derde-van-de-kippen-lijdt-aan-pijnlijke-ontstekingen'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Plofkippen',
+                          explanation='KFC forceert hun kuikens om op 30 dagen tijd tot een monstreuze kip van 1,8 '
+                                      'kilo te groeien. '
+                                      'Dit veroorzaakt veel lijden voor de kippen.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Grote kippenren betekent grote verantwoordelijkheid',
+                          explanation='Per jaar doodt KFC ongeveer een miljard kippen. Dit toont hoe groot hun '
+                                      'verantwoordelijkheid voor dierenwelzijn is.',
+                          url_ref=['https://ifakfcbucketcouldtalk.weebly.com/if-a-bucket-of-kfc-could-talk-blog'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)

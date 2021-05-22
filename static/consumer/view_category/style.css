@@ -10,13 +10,56 @@
     --red: rgb(220, 79, 0);
     --dark-blue: rgb(56, 96, 170);
     --angry: rgb(200, 0, 130);
+
+    --light: 80;
+    --treshold: 60;
 }
 
-body {
+html, body {
     color: black;
-    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.body {
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#categoryImageWrapper {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#categoryImageWrapper::after {
+    height: 100%;
+}
+
+#categoryImage {
+    /*height: 100%;*/
+    width: 100vw;
+    content: "";
+    background-repeat: no-repeat no-repeat;
     background-size: 30vh;
     background-position: right center;
+    background-attachment: fixed;
+    /*position: absolute;*/
+    /*z-index: -1;*/
+    /*display: block;*/
+    opacity: 0.5;
+}
+
+#categoryImage::after {
 }
 
 body {
@@ -28,7 +71,7 @@ body {
 }
 
 .collapsible, .collapsible-header {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-blue) !important;
 }
 
 .collapsible {
@@ -60,12 +103,13 @@ body {
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 
 .category-card {
     height: 300px;
     overflow: hidden;
+    word-wrap: break-word;
 }
 
 .card-image {
@@ -90,26 +134,30 @@ body {
     color: black !important;
 }
 
-#workingConditions {
+#workingConditions, .collapsible.workingConditions, .collapsible-header.workingConditions {
     background-color: var(--lemon);
 }
 
-#climateEnvironment {
+#climateEnvironment, .collapsible.climateEnvironment, .collapsible-header.climateEnvironment {
     background-color: var(--pink);
 }
 
-#health {
+#health, .collapsible.health, .collapsible-header.health {
     background-color: var(--light-green);
 }
 
-#animalWelfare {
+#animalWelfare, .collapsible.animalWelfare, .collapsible-header.animalWelfare {
     background-color: var(--bright-pink);
 }
 
-#localCommunity {
+#localCommunity, .collapsible.localCommunity, .collapsible-header.localCommunity {
     background-color: var(--purple);
 }
 
-.language-link {
+.language-link, .title-link {
     color: black;
+}
+
+#currentCategory {
+    word-wrap: break-word;
 }

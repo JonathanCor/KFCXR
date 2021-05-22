@@ -5,19 +5,29 @@ from fifty_shades_of_kfc.views.text.malpractice import MalpracticeCategory, Malp
 
 LOCAL_COMMUNITY = MalpracticeCategory(name='Lokale Gemeenschap', reference='localCommunity')
 
-lorem_ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' \
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ' \
-              'aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ' \
-              'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ' \
-              'qui officia deserunt mollit anim id est laborum'
 
-image_ref = 'https://images1.persgroep.net/rcs/PwH31Whvtd2oskLgaeQcrSHRY8Y/diocontent/176393540/_fitwidth/763?appId=' \
-            '93a17a8fd81db0de025c8abd1cca1279&quality=0.8'
+malpractice = Malpractice(title='Geen ruimte voor lokaal ondernemen',
+                          explanation='Multinationals duwen huurprijzen omhoog, waardoor onafhankelijke zaken, '
+                                      'die al lijden door COVID richting faillissement geduwd worden.')
 
-for counter in range(10):
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
 
-    malpractice = Malpractice(title='Probleem ' + str(counter+1),
-                              explanation=lorem_ipsum,
-                              image_ref=image_ref)
 
-    LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+malpractice = Malpractice(title='Geen democratische inspraak',
+                          explanation='In een stad met zoveel leegstand, heeft Leuven echt een KFC nodig? '
+                                      'Dit is niet gewoon hoe de economie werkt. Dit is een politieke beleidskeuze.')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Prachtig historisch centrum?',
+                          explanation='Grote ketens verpesten het karakter van een stad, willen we echt dat Leuven er '
+                                      'binnenkort uitziet als een Amerikaanse stad?')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Dit is nog maar het begin',
+                          explanation='KFC hoopt tussen 2019 en 2025 40 vestigingen te openen in België.')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)

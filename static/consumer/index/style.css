@@ -42,7 +42,14 @@ body {
 
 .category-card {
     height: 300px;
-    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    word-wrap: break-word;
+}
+
+.category-card::-webkit-scrollbar {
+    display: None;
 }
 
 .card-image {

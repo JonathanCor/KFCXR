@@ -5,19 +5,29 @@ from fifty_shades_of_kfc.views.text.malpractice import MalpracticeCategory, Malp
 
 LOCAL_COMMUNITY = MalpracticeCategory(name='Local Community', reference='localCommunity')
 
-lorem_ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' \
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ' \
-              'aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ' \
-              'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ' \
-              'qui officia deserunt mollit anim id est laborum'
 
-image_ref = 'https://images1.persgroep.net/rcs/PwH31Whvtd2oskLgaeQcrSHRY8Y/diocontent/176393540/_fitwidth/763?appId=' \
-            '93a17a8fd81db0de025c8abd1cca1279&quality=0.8'
+malpractice = Malpractice(title='No room for local businesses',
+                          explanation='Multinational companies like KFC drive up rent prices, pushing independent '
+                                      'businesses already suffering from COVID towards bankruptcy.')
 
-for counter in range(10):
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
 
-    malpractice = Malpractice(title='Problem ' + str(counter+1),
-                              explanation=lorem_ipsum,
-                              image_ref=image_ref)
 
-    LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+malpractice = Malpractice(title='No democratic input',
+                          explanation='With so many vacant buildings, is a KFC really what we need? '
+                                      'It\'s not just how the economy works. These are policy decisions.')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Beautiful historical city center?',
+                          explanation='Big chains destroy the character of a city, '
+                                      'do we want Leuven to look like any American town?')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='This is just the beginning',
+                          explanation='Between 2019 and 2025, KCF wants to open 40 restaurants in Belgium.')
+
+LOCAL_COMMUNITY.add_malpractice(malpractice=malpractice)

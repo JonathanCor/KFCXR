@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['xrleuven.pythonanywhere.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'fifty_shades_of_kfc.apps.FiftyShadesOfKfcConfig',
+    'main_page',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

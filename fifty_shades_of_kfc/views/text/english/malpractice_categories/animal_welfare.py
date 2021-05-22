@@ -5,19 +5,42 @@ from fifty_shades_of_kfc.views.text.malpractice import MalpracticeCategory, Malp
 
 ANIMAL_WELFARE = MalpracticeCategory(name='Animal Welfare', reference='animalWelfare')
 
-lorem_ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' \
-              'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ' \
-              'aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ' \
-              'cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ' \
-              'qui officia deserunt mollit anim id est laborum'
 
-image_ref = 'https://images1.persgroep.net/rcs/PwH31Whvtd2oskLgaeQcrSHRY8Y/diocontent/176393540/_fitwidth/763?appId=' \
-            '93a17a8fd81db0de025c8abd1cca1279&quality=0.8'
+malpractice = Malpractice(title='21 Fully grown chickens into 1m²',
+                          explanation='In more than 80 procent of the cases, KFC squeezes twenty-one fully grown '
+                                      'chickens into a single square meter, try to imagine that for a moment.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
 
-for counter in range(10):
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
 
-    malpractice = Malpractice(title='Problem ' + str(counter+1),
-                              explanation=lorem_ipsum,
-                              image_ref=image_ref)
 
-    ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+malpractice = Malpractice(title='KFC Chickens never see the sun',
+                          explanation='Half of KFC chickens don\'t see the sun a single time in their entire short '
+                                      'life.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='painful infections',
+                          explanation='1 in 3 KFC chickens suffers from painful infections.',
+                          url_ref=['https://joop.bnnvara.nl/nieuws/kfc-geeft-toe-een-derde-van-de-kippen-lijdt-aan-pijnlijke-ontstekingen'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Broiler chickens',
+                          explanation='In 30 days, a chick is forced to grow to a monstrous 1.8kg. '
+                                      'These chickens have been selectively bred to grow that fast. '
+                                      'This causes a great deal of suffering to the animals.',
+                          url_ref=['https://kfc.nl/kfc-jaarlijks-voortgangsverslag-over-kippenwelzijn.pdf'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Big chicken coop means big responsibility',
+                          explanation='Per year, KFC kills about 1 billion chickens (record of 2014). '
+                                      'That is, they have an outsized responsability in animal welfare.',
+                          url_ref=['https://ifakfcbucketcouldtalk.weebly.com/if-a-bucket-of-kfc-could-talk-blog'])
+
+ANIMAL_WELFARE.add_malpractice(malpractice=malpractice)

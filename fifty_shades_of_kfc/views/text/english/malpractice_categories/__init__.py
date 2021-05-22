@@ -14,3 +14,5 @@ MALPRACTICE_CATEGORIES = {
     HEALTH.reference: HEALTH,
     LOCAL_COMMUNITY.reference: LOCAL_COMMUNITY,
 }
+
+SOURCES = 'Sources'
