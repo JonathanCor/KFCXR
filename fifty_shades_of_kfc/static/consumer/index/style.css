@@ -97,3 +97,12 @@ body {
 .language-link {
     color: black;
 }
+
+#greyCard {
+    background-size: cover;
+    background-position: center;
+}
+
+#greyCard > span {
+    text-shadow: 0px 0px 10px black, 0px 0px 10px black !important;
+}

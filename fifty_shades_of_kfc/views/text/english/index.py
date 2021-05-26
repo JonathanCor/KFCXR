@@ -5,7 +5,7 @@ from .malpractice_categories import MALPRACTICE_CATEGORIES
 
 TITLE = 'Fifty Shades of KFC'
 
-GREY_CARD = 'We\'ve collected 50 problems and abuses of KFC and sorted them into 5 categories. ' \
+GREY_CARD = 'We\'ve collected a bunch of problems and abuses of KFC and sorted them into 5 categories. ' \
             'Click on the cards to learn more.'
 
 CARD_TITLE_1 = 'Working Conditions'

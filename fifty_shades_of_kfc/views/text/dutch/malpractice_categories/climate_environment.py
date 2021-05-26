@@ -42,3 +42,56 @@ malpractice = Malpractice(title='Voeder maken van het regenwoud',
                           url_ref=['https://ourworldindata.org/soy'])
 
 CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Luchtvervuiling',
+                          explanation='Kippenrennen stoten grote hoeveelheden ammoniak en andere stikstofhoudende '
+                                      'moleculen uit, dit heeft een negatief effect op de luchtkwaliteit. '
+                                      'Ammoniakgas in de atmosfeer ondergaat reacties waarin fijn stof ontstaan '
+                                      '(PM2.5), dit fijn stof kan grote afstanden afleggen en wordt geassocieerd met '
+                                      'verhoogd risico op longkanker en andere hart- en longziekte gerelateerde '
+                                      'overlijdens.',
+                          url_ref=['https://www.theguardian.com/environment/2017/jul/25/mega-farms-devastating-effects-go-far-beyond-the-chicken-shed'])
+
+CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Effect op wilde dieren',
+                          explanation='De stikstof “fall-out” rond kippenboerderijen kan zodanig hoog zijn dat de '
+                                      'stikstofvervuiling de lokale wildpopulatie verandert. Veel gevoelige '
+                                      'dierensoorten reageren slecht op hoge stikstofconcentraties en worden dan '
+                                      'vervangen door diersoorten die al veel voorkomen. Dit is dus slecht voor de '
+                                      'biodiversiteit die noodzakelijk is voor robuuste ecosystemen.',
+                          url_ref=['https://www.theguardian.com/environment/2017/jul/25/mega-farms-devastating-effects-go-far-beyond-the-chicken-shed'])
+
+CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Mestoverschot',
+                          explanation='Industriële kippenboerderijen produceren een onhoudbare hoeveelheid mest. '
+                                      'Deze kippenmest wordt op veel verschillende manieren gebruikt, onder andere '
+                                      'als meststof voor landbouw. De "run-off" hiervan veroorzaakt '
+                                      'stikstofvervuiling in de bodem en in onze waterwegen.',
+                          url_ref=['https://foodprint.org/issues/what-happens-to-animal-waste/'])
+
+CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Klimaatverhitting',
+                          explanation='Ons globaal voedselproductiesysteem is een van de voornaamste bijdragers aan '
+                                      'de klimaatverhitting. Vleesconsumptie veranderen van runds naar kip werd ooit '
+                                      'gezien als een stap in de juiste richting maar wetenschappers trekken nu aan '
+                                      'de alarmbel. Wetenschappers waarschuwen ons dat we de vleesindustrie op '
+                                      'dezelfde manier moeten zien als de fossiele-brandstoffenindustrie.',
+                          url_ref=['https://www.ecowatch.com/beef-chicken-climate-change-impact-2652836402.html'])
+
+CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
+
+
+malpractice = Malpractice(title='Landgebruik',
+                          explanation='Meer dan 71% van Europese landbouwgrond is gereserveerd voor vlees- en '
+                                      'melkproductie, dus het reduceren van vleesproductie is een manier waarop '
+                                      'grote verbetering bereikt kan worden.',
+                          url_ref=['https://www.greenpeace.org/eu-unit/issues/nature-food/1807/71-eu-farmland-meat-dairy/#:~:text=%23Farming%20%23Food-,Over%2071%25%20of%20EU%20farmland%20dedicated,meat%20and%20dairy%2C%20new%20research&text=Brussels%20%E2%80%93%20At%20least%2071%25%20of,new%20research%20published%20by%20Greenpeace.&text=Researchers%20calculated%20that%20125%20million,graze%20livestock%20or%20produce%20feed.'])
+
+CLIMATE_ENVIRONMENT.add_malpractice(malpractice=malpractice)
